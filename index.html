@@ -154,13 +154,13 @@ header.scrolled .logo-s{font-size:8px}
 /* ---------- hero ---------- */
 .hero{position:relative;height:calc(100svh - var(--nav-h) - 38px);min-height:560px;overflow:hidden;background:var(--sand)}
 .hero-media{position:absolute;inset:0;overflow:hidden}
-.hero-media img{width:100%;height:110%;object-fit:cover;object-position:center 32%;transform:scale(1.1);animation:kb 22s var(--e) forwards}
+.hero-media img{width:100%;height:110%;object-fit:cover;object-position:center 20%;transform:scale(1.1);animation:kb 22s var(--e) forwards}
 @keyframes kb{to{transform:scale(1)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(23,19,16,.5) 0%,rgba(23,19,16,.18) 46%,rgba(23,19,16,.02) 72%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(23,19,16,.8) 0%,rgba(23,19,16,.52) 30%,rgba(23,19,16,.2) 55%,rgba(23,19,16,.04) 78%)}
 .hero-in{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--pad) clamp(46px,7vw,92px);color:#fff}
 .hero-in .kicker{color:rgba(255,255,255,.78)}
-.hero-in .d1{color:#fff;margin:18px 0 22px;max-width:15ch}
-.hero-in p.lede{color:rgba(255,255,255,.85);max-width:44ch;margin-bottom:34px}
+.hero-in .d1{color:#fff;margin:16px 0 20px;max-width:14ch;font-size:clamp(40px,6.2vw,88px);text-shadow:0 2px 30px rgba(23,19,16,.35)}
+.hero-in p.lede{color:rgba(255,255,255,.9);max-width:42ch;margin-bottom:30px;text-shadow:0 1px 16px rgba(23,19,16,.4)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .scroll-cue{position:absolute;right:var(--pad);bottom:clamp(46px,7vw,92px);z-index:3;color:#fff;display:flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.26em;text-transform:uppercase}
 .scroll-cue i{display:block;width:1px;height:52px;background:rgba(255,255,255,.4);position:relative;overflow:hidden}
@@ -453,6 +453,8 @@ footer li a:hover{color:var(--ivory)}
   .filters{position:static}
   .look-med img{aspect-ratio:3/4}
   .hero{height:calc(100svh - 62px - 38px)}
+  .ann p{white-space:nowrap;font-size:9.5px;letter-spacing:.15em}
+  .ann-x{display:none}
   .scroll-cue{display:none}
   .f-top{grid-template-columns:1fr 1fr}
   .card-name{font-size:16px}
@@ -480,11 +482,11 @@ footer li a:hover{color:var(--ivory)}
 <!-- ================= ANNONCES ================= -->
 <div class="ann" aria-live="polite">
   <div class="slot" id="ann">
-    <p class="on">Livraison offerte dès <b>150&nbsp;€</b> — retours gratuits en boutique à <b>La Roche-sur-Yon</b></p>
-    <p>Nouvelle collection <b>Automne 2026</b> — en boutique et en ligne</p>
-    <p>Retrait gratuit en <b>1 h</b> à la boutique de La Roche-sur-Yon</p>
-    <p>Paiement en <b>3 ou 4 fois</b> sans frais dès 200&nbsp;€</p>
-    <p><b>-10 %</b> sur votre première commande avec le code <b>MAISON10</b></p>
+    <p class="on">Livraison offerte dès <b>150&nbsp;€</b><span class="ann-x"> — retours gratuits en boutique à <b>La Roche-sur-Yon</b></span></p>
+    <p>Nouvelle collection <b>Automne 2026</b><span class="ann-x"> — en boutique et en ligne</span></p>
+    <p>Retrait gratuit en <b>1 h</b><span class="ann-x"> à la boutique de La Roche-sur-Yon</span></p>
+    <p>Paiement en <b>3 ou 4 fois</b> sans frais<span class="ann-x"> dès 200&nbsp;€</span></p>
+    <p><b>-10 %</b> sur votre première commande<span class="ann-x"> avec le code <b>MAISON10</b></span></p>
   </div>
 </div>
 
@@ -869,7 +871,7 @@ footer li a:hover{color:var(--ivory)}
    ============================================================ */
 /* ---- VISUELS D'AMBIANCE ---- */
 var IMG = {
-  13:"hero.jpg",
+  13:"hero-boutique.jpg",
   14:"atelier.jpg",
   15:"boutique.jpg",
   16:"lookbook.jpg",
